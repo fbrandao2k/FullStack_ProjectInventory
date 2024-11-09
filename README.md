@@ -35,7 +35,7 @@ Then go to the web browser, and open http://127.0.0.1:5000
 
 ### Real-time webcam processing with YoloV8
 
-![webcamRealTimeDetection Page](./github_images/webcamRealTimeDetectionWebcam.JPG)
+![webcamRealTimeDetection Page](./github_images/videoRealTimeDetectionWebcam.JPG)
 
 ## Acknowledgments
 
