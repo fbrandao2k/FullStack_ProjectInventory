@@ -21,21 +21,21 @@ Then go to the web browser, and open http://127.0.0.1:5000
 
 ### Projects Page
 
-![Projects Page](projectsPage.JPG)
+![Projects Page](./github_images/projectsPage.JPG)
 
 ### Users Page
 
-![Users Page](usersPage.JPG)
+![Users Page](./github_images/usersPage.JPG)
 
-### Artificial Inteligence Page
+### Artificial Intelligence Page
 
 ### Real-time video processing with YoloV8
 
-![videoRealTimeDetection Page](videoRealTimeDetection.JPG)
+![videoRealTimeDetection Page](./github_images/videoRealTimeDetection.JPG)
 
-### Real-time webcam processing with YOloV8
+### Real-time webcam processing with YoloV8
 
-![webcamRealTimeDetection Page](videoRealTimeDetectionWebcam.JPG)
+![webcamRealTimeDetection Page](./github_images/webcamRealTimeDetectionWebcam.JPG)
 
 ## Acknowledgments
 
