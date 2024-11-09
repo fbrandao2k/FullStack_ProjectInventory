@@ -11,11 +11,11 @@
 <div id="app">
 
   <aside id="sidebar">
-    <img id="company-logo" src="./assets/company-logo.svg" alt="Construction Company">
+    <img id="company-logo" src="{{ url_for('static', filename='company-logo.svg') }}" alt="Construction Company">
     <ul id="nav-buttons">
-      <a href="/index"><li><span class="material-icons-round">apartment</span>Projects</li></a>
-      <a href="/people"><li><span class="material-icons-round">people</span>Users</li></a>
-      <a href="/ArtificialInteligence"><li><span class="material-icons-round">badge</span>Artificial Inteligence</li></a>
+      <a href="/index" class="styled-link"><li><span class="material-icons-round">apartment</span>Projects</li></a>
+      <a href="/people" class="styled-link"><li><span class="material-icons-round">people</span>Users</li></a>
+      <a href="/ArtificialInteligence" class="styled-link"><li><span class="material-icons-round">badge</span>Artificial Inteligence</li></a>
     </ul>
   </aside>
 

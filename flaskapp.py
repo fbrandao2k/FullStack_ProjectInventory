@@ -55,7 +55,7 @@ def generate_frames_web(path_x):
 
 @app.route('/', methods=['GET','POST'])
 
-@app.route('/home', methods=['GET','POST'])
+@app.route('/index', methods=['GET','POST'])
 def home():
     session.clear()
     return render_template('index.html')
@@ -71,10 +71,11 @@ def people():
 @app.route("/webcam", methods=['GET','POST'])
 def webcam():
     session.clear()
-    return render_template('ui.html')
+    return render_template('ArtificialInteligenceWebcam.html')
 
-@app.route('/FrontPage', methods=['GET','POST'])
-def front():
+# Rendering the Video Rage
+@app.route('/ArtificialInteligence', methods=['GET', 'POST'])
+def artificial_intelligence():
     # Upload File Form: Create an instance for the Upload File Form
     form = UploadFileForm()
     if form.validate_on_submit():
@@ -85,16 +86,7 @@ def front():
         # Use session storage to save video file path
         session['video_path'] = os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'],
                                              secure_filename(file.filename))
-    return render_template('videoprojectnew.html', form=form)
-
-@app.route('/ArtificialInteligence', methods=['GET', 'POST'])
-def artificial_intelligence():
-    form = UploadFileForm()
-    if form.validate_on_submit():
-        # Handle file upload
-        file = form.file.data
-        file.save(os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(file.filename)))
-    return render_template('/ArtificialInteligence.html', form=form)
+    return render_template('/ArtificialInteligenceVideo.html', form=form)
 
 @app.route('/video')
 def video():

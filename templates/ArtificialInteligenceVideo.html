@@ -10,11 +10,11 @@
 <body>
   <div id="app">
   <aside id="sidebar">
-    <img id="company-logo" src="./assets/company-logo.svg" alt="Construction Company">
+    <img id="company-logo" src="{{ url_for('static', filename='company-logo.svg') }}" alt="Construction Company">
     <ul id="nav-buttons">
-      <li><span class="material-icons-round">apartment</span>Projects</li>
-      <li><span class="material-icons-round">people</span>Users</li>
-      <li><span class="material-icons-round">badge</span>Artificial Inteligence</li>
+      <a href="/index" class="styled-link"><li><span class="material-icons-round">apartment</span>Projects</li></a>
+      <a href="/people" class="styled-link"><li><span class="material-icons-round">people</span>Users</li></a>
+      <a href="/ArtificialInteligence" class="styled-link"><li><span class="material-icons-round">badge</span>Artificial Inteligence</li></a>
     </ul>
   </aside>
   <main id="content">
@@ -63,59 +63,37 @@
     </dialog>
 
     <header>
-      <h2>Artificial Inteligence</h2>
+      <h2>Artificial Inteligence - Object Detection using YOLOv8</h2>
       <div style="display: flex; gap: 10px;">
         <button><span class="material-icons-round">add</span>Video</button>
-        <button><span class="material-icons-round">add</span>Webcam</button>
+        <a href="{{ url_for('webcam') }}" class="styled-link"><button><span class="material-icons-round">add</span>Webcam</button></a>
       </div>
     </header>
     <div id="projects-list">
       
       <section>
         <div class="new" >
-          <form method = 'POST' enctype="multipart/form-data" style="align-content: center; text-align: center;display: flex;">
+          <form method = 'POST' enctype="multipart/form-data" style="vertical-align: center; align-content: center; text-align: center;display: flex;">
             {{form.hidden_tag()}}
             {{form.file(class_="custom-file-input")}}
     
-            <div>
-            <button type="submit" name="favorite" value="x" class="btnCustom">
+            <div style="display: flex; align-items: center;">
+            <button type="submit" name="favorite" value="x" class="btnCustom" style="vertical-align: center; align-content: center; text-align: center;display: flex;">
                 Submit
             </button>
           </div>
           </form>
         </div>
-    
-      </div>
-        </section>
+      </section> 
+      
+    </div>
 
-        
-      <div class="project-card">
-        <div class="card-header">
-          <p style="background-color: #ca8134; padding: 10px; border-radius: 8px; aspect-ratio: 1;">HC</p>
-          <div>
-            <h5>Project Name</h5>
-            <p>Project Description Goes Here...</p>
-          </div>
-        </div>
-        <div class="card-content">
-          <div class="card-property">
-            <p style="color: #969696;">Status</p>
-            <p>Active</p>
-          </div>
-          <div class="card-property">
-            <p style="color: #969696;">Role</p>
-            <p>Engineer</p>
-          </div>
-          <div class="card-property">
-            <p style="color: #969696;">Cost</p>
-            <p>$2'000.000</p>
-          </div>
-          <div class="card-property">
-            <p style="color: #969696;">Estimated Progress</p>
-            <p>45%</p>
-          </div>
-        </div>
-      </div>
+    <div class="AI-card">
+      <section class="col-sm " >
+        <img src="{{ url_for('video') }}"   alt="Upload video">
+      </section>
+    </div>
+
     </div>
   </main>
   </div>

@@ -29,7 +29,7 @@
   display: grid;
   grid-template-columns: 300px 1fr;
   grid-template-areas: 'sidebar content';
-  height: 100vh;
+  height: 120vh;
   background-color: var(--background);
   color: #fff;
 }
@@ -144,6 +144,13 @@ header {
 .project-card:hover {
   outline: 2px solid var(--primary);
 }
+
+.AI-card {
+  background-color: inherit;
+  border-radius: 8px;
+  margin: 20px;
+}
+
 
 .card-header {
   display: flex;

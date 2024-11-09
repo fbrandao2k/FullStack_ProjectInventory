@@ -61,40 +61,23 @@
         </div>
       </form>
     </dialog>
+
     <header>
-      <h2>Projects</h2>
-      <div>
-        <button><span class="material-icons-round">add</span>New Project</button>
+      <h2>Artificial Inteligence - Webcam + Yolov8</h2>
+      <div style="display: flex; gap: 10px;">
+        <a href="{{ url_for('artificial_intelligence') }}" class="styled-link"><button><span class="material-icons-round">add</span>Video</button></a>
+        <button><span class="material-icons-round">add</span>Webcam</button>
       </div>
     </header>
     <div id="projects-list">
-      <div class="project-card">
-        <div class="card-header">
-          <p style="background-color: #ca8134; padding: 10px; border-radius: 8px; aspect-ratio: 1;">HC</p>
-          <div>
-            <h5>Project Name</h5>
-            <p>Project Description Goes Here...</p>
-          </div>
-        </div>
-        <div class="card-content">
-          <div class="card-property">
-            <p style="color: #969696;">Status</p>
-            <p>Active</p>
-          </div>
-          <div class="card-property">
-            <p style="color: #969696;">Role</p>
-            <p>Engineer</p>
-          </div>
-          <div class="card-property">
-            <p style="color: #969696;">Cost</p>
-            <p>$2'000.000</p>
-          </div>
-          <div class="card-property">
-            <p style="color: #969696;">Estimated Progress</p>
-            <p>45%</p>
-          </div>
-        </div>
-      </div>
+      
+      <section class="col-sm " >
+        <img src="{{ url_for('webapp') }}"   alt="Upload video">
+      </section>
+      
+    </div>
+
+
     </div>
   </main>
   </div>
